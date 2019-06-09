@@ -1,0 +1,11 @@
+[Unit]
+Description=framebuffer refresh helper
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/refresher --loop
+ExecStart=/usr/bin/refresher-ext --loop
+
+[Install]
+WantedBy=graphical.target
+

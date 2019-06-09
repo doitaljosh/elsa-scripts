@@ -1,0 +1,9 @@
+[Unit]
+Description=Script for booting up the Qualcomm subsystems
+Before=slices.target
+
+[Service]
+ExecStart=/usr/bin/subsys-init.sh
+
+[Install]
+WantedBy=slices.target

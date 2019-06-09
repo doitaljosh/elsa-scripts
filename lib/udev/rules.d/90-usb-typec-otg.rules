@@ -1,0 +1,4 @@
+ATTRS{id}=="anx7688-usbc", RUN+="echo 'ufp' > /sys/class/dual_role_usb/otg_default/mode"
+
+SUBSYSTEM=="power_supply/usb",ATTRS{usb_otg}=="1",RUN+="/usr/bin/typec-otg-helper.sh --enable-otg"
+SUBSYSTEM=="power_supply/usb",ATTRS{usb_otg}=="0",RUN+="/usr/bin/typec-otg-helper.sh --disable-otg"
